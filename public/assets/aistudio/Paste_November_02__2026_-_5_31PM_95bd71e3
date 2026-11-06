@@ -1,0 +1,938 @@
+# WEBSITE DEVELOPMENT SPECIFICATION
+## Austin Mamedu & Co. — Solicitors | Research | Consulting
+
+## 1. PROJECT OVERVIEW
+
+Build a sophisticated, premium, fully responsive website for **Austin Mamedu & Co.**, a Nigerian law firm established in 1988.
+
+The website should communicate the firm's experience, professional credibility, international exposure, legal expertise, and commitment to client care.
+
+The overall experience should feel like the digital presence of an established international law practice rather than a conventional small-business website.
+
+The design must combine:
+- A predominantly black and gold visual identity.
+- Elegant, restrained typography.
+- Extensive but tasteful scrollytelling and scroll-triggered animations.
+- Sophisticated image compositions.
+- A formal, corporate, editorial aesthetic.
+- Clear navigation and accessible presentation of legal information.
+
+**Important:** The website should be visually impressive without becoming overly animated, theatrical, flashy, or resembling a creative agency portfolio. Professionalism and readability must always take priority over animation.
+
+---
+
+# 2. BRAND IDENTITY AND DESIGN SYSTEM
+
+## 2.1 Primary Colours
+
+Use the following colour palette:
+
+| Colour | Hex Code | Application |
+|---|---|---|
+| Deep Black | #080808 | Primary background |
+| Soft Black | #111111 | Secondary sections and cards |
+| Antique Gold | #C5A15A | Primary accent, headings, borders |
+| Champagne Gold | #D8C18A | Secondary highlights |
+| Warm White | #F5F2EB | Primary text on dark backgrounds |
+| Muted Grey | #A6A29A | Secondary text |
+
+Black must dominate the website. Gold should be used selectively for emphasis, visual hierarchy, borders, navigation details, and interactive states.
+
+Avoid excessive gold backgrounds or large areas of bright yellow. The gold should resemble brushed or antique gold rather than a bright metallic yellow.
+
+Some sections may introduce a warm ivory or off-white background to create contrast and give the website an editorial, luxury-law-firm feel. However, black should remain the dominant colour across the complete website.
+
+## 2.2 Typography
+
+Use an elegant serif typeface for major headings and a clean sans-serif typeface for body text.
+
+Recommended combinations:
+
+- Headings: Cormorant Garamond, Playfair Display, or Libre Baskerville.
+- Body text: Inter, Manrope, or Montserrat.
+
+Typography should communicate authority, sophistication, and tradition.
+
+Use:
+- Large editorial-style headings.
+- Generous spacing between paragraphs.
+- Carefully controlled line lengths.
+- Subtle uppercase section labels.
+- Gold highlights for selected words or phrases.
+
+Avoid overly decorative fonts.
+
+## 2.3 Visual Direction
+
+The website should draw inspiration from premium international law firms, luxury editorial publications, and sophisticated corporate websites.
+
+Visual characteristics:
+- Generous negative space.
+- Full-width black sections.
+- Thin gold divider lines.
+- Subtle background textures.
+- Large, carefully composed photographs.
+- Asymmetrical image and text layouts.
+- Minimalist icons.
+- Elegant transitions between sections.
+- Strong visual hierarchy.
+
+Do not use generic law-themed stock photography excessively, particularly clichéd images of gavels, scales of justice, and courthouse columns.
+
+Prioritise the actual photographs supplied with this project.
+
+---
+
+# 3. WEBSITE STRUCTURE AND NAVIGATION
+
+The website must contain three primary pages:
+
+1. Home
+2. Our Work
+3. Your Lawyers
+
+Use a consistent navigation bar across all three pages.
+
+### Navigation layout
+
+The firm's name and identity should appear on the left:
+
+**Austin Mamedu & Co.**
+
+*Solicitors | Research | Consulting*
+
+Navigation links should appear on the right:
+
+- Home
+- Our Work
+- Your Lawyers
+- Contact
+
+The Contact link should direct visitors to the Contact section at the bottom of the Home page.
+
+On mobile devices, replace the desktop navigation with an elegant hamburger menu.
+
+The navigation bar should initially appear transparent over the hero section. As the user scrolls, it should transition into a solid black or slightly translucent black background with a subtle gold bottom border.
+
+The navigation should remain accessible while scrolling.
+
+---
+
+# 4. WEBSITE INTRODUCTION AND NAME REVEAL
+
+Create a cinematic but restrained introductory animation when visitors first enter the website.
+
+The opening screen should have a completely black background.
+
+The firm's name should appear through an elegant letter-by-letter or word-by-word reveal:
+
+**Austin Mamedu & Co**
+
+Immediately underneath, reveal:
+
+*Solicitors | Research | Consulting*
+
+### Animation direction
+
+1. Begin with a completely black screen.
+2. Introduce a thin horizontal gold line.
+3. Reveal "Austin Mamedu & Co" gradually using a sophisticated serif font.
+4. Fade in "Solicitors | Research | Consulting" underneath.
+5. Allow the gold line to extend subtly across the screen.
+6. Transition smoothly into the homepage hero section.
+
+The animation should last approximately 2–4 seconds.
+
+Include a Skip Intro option.
+
+The introduction should play on a visitor's first entry into the website and should not repeatedly interrupt navigation between pages. Respect the user's reduced-motion accessibility settings.
+
+---
+
+# 5. HOME PAGE
+
+The homepage must present its content in the following order:
+
+1. Hero section
+2. About Us
+3. Motto
+4. Establishment
+5. Client Care
+6. Some Testimonials
+7. Contact
+
+## 5.1 HERO SECTION
+
+Following the introductory name reveal, display a full-screen hero section.
+
+The hero must prominently feature:
+
+**Austin Mamedu & Co.**
+
+*Solicitors | Research | Consulting*
+
+Include a short supporting statement:
+
+"Legal expertise shaped by experience, strengthened by research, and guided by professional excellence."
+
+This supporting statement is suggested copy and may be refined to complement the firm's established identity.
+
+### Visual treatment
+
+- Full-screen black background.
+- Large serif typography.
+- Gold accent line.
+- Subtle animated gold gradient or texture.
+- Elegant background image or abstract architectural texture, if suitable.
+- A subtle scroll indicator at the bottom.
+
+The hero should feel authoritative and understated.
+
+## 5.2 ABOUT US
+
+Section heading:
+
+**ABOUT US**
+
+Display the following text exactly as provided:
+
+"We offer general legal advisory services with specialism in legislative drafting, tax law, international human rights, employment, child rights, residential and commercial conveyancing, company/commercial law and litigation.
+
+Client care standards are the foundation of our success, and we take care to satisfy our clients’ needs while delivering excellence and professionalism through the employment of innovative skills gained from a mix of international exposure and cultures."
+
+### Design and animation
+
+Use an editorial split-screen composition.
+
+Place the heading on one side and the text on the other.
+
+As the visitor scrolls:
+- The heading should fade in and move gently into position.
+- The paragraphs should appear progressively.
+- A thin gold line should animate into view.
+- Use subtle parallax movement where appropriate.
+
+Keep the text readable and avoid excessive animation.
+
+## 5.3 MOTTO
+
+Section heading:
+
+**MOTTO**
+
+Display the following quotation prominently:
+
+"In law, a man is guilty when he violates the rights of others. In ethics, he is guilty if he only thinks of doing so."
+
+Attribution:
+
+~ Immanuel Kant
+
+### Design direction
+
+This section should create a visual pause between About Us and Establishment.
+
+Use:
+- A full-width black background.
+- Oversized serif quotation typography.
+- Gold quotation marks or a gold accent line.
+- A subtle fade-in animation.
+- The attribution in smaller uppercase or italic typography.
+
+The quotation should be the central visual feature of this section.
+
+## 5.4 ESTABLISHMENT
+
+Section heading:
+
+**ESTABLISHMENT**
+
+Display the following content:
+
+"The law firm of Austin Mamedu & Co. (AM&Co.) was established in 1988 by Augustine Mamedu, with its first practice office at 3 Medical Road, Ikeja, Lagos. The firm established a strong pedigree in maritime law and corporate services, acting in several carriage of goods by sea and commercial law disputes. The firm's principal office is now located in Abuja.
+
+Austin Mamedu & Co. has served UN Agencies and international non-governmental organisations (INGOs) such as UNICEF, IOM, and Save the Children International, and corporate organisations such as Microsoft Nigeria Ltd (AM&Co. registered Microsoft Nigeria Limited in the year 2000 and served as its company secretary), DAAR Communications Plc, SGS Inspections Services Nigeria Ltd, NICON Insurance Plc, etc."
+
+### Image integration
+
+Use the following supplied photographs in this section:
+
+- establishment_1
+- establishment_2
+- establishment_3
+
+These images should be integrated into an artistic but formal editorial gallery.
+
+Do not simply arrange the photographs in three identical rectangular cards.
+
+Instead, use an asymmetrical composition:
+- One large primary image.
+- Two smaller supporting images.
+- Elegant spacing and thin gold borders where appropriate.
+- Carefully controlled image cropping.
+- Subtle parallax movement as visitors scroll.
+
+The images should be revealed progressively as the visitor moves through the section.
+
+The text and photographs should work together to tell the story of the firm's establishment and evolution.
+
+### Historical timeline treatment
+
+Consider adding a subtle timeline element highlighting:
+
+**1988** — Establishment of Austin Mamedu & Co.
+
+**2000** — Registration of Microsoft Nigeria Limited and appointment as company secretary.
+
+**Present** — Principal office in Abuja.
+
+Only include the information supplied above. Do not invent additional historical milestones.
+
+The timeline should be visually integrated into the section rather than appearing as a generic infographic.
+
+## 5.5 CLIENT CARE
+
+Section heading:
+
+**CLIENT CARE**
+
+Display the following text:
+
+"Clients are assured of our efficiency in professional service delivery. Any observed deficiencies are immediately remedied at no additional cost to the client."
+
+### Design direction
+
+Use a minimalist, elegant layout.
+
+The heading should appear in large serif typography.
+
+The paragraph should be positioned within a spacious black section, with a gold vertical line or border providing visual emphasis.
+
+A subtle fade-in or text-reveal animation should occur as the section enters the viewport.
+
+Do not add unsupported claims about guarantees, service-level agreements, or other contractual commitments.
+
+## 5.6 SOME TESTIMONIALS
+
+Section heading:
+
+**SOME TESTIMONIALS**
+
+Display the following testimonials exactly as provided.
+
+**Testimonial 1**
+
+"No doubt a lot of industry was expended by the learned counsel, especially Augustine Mamedu. I quite commend him for the industry and the amount and level of work exhibited in this application"
+
+— Hon. Justice A.N. Ehigiamusoe.
+
+**Testimonial 2**
+
+"I wish to confirm that I found Augustine Mamedu to be a very good and diligent worker, bright, intelligent and with a pleasant and co-operative manner. I have remained in contact with Augustine, and I find him to be of good character."
+
+— James K. Quinn, Solicitor, Longford, Republic of Ireland.
+
+### Design direction
+
+Display testimonials as elegant editorial quotation panels.
+
+Use:
+- Dark backgrounds.
+- Large gold quotation marks.
+- Serif typography.
+- Thin gold dividers.
+- Subtle fade-in transitions.
+
+On desktop, display the testimonials side by side or in a carefully balanced two-column arrangement.
+
+On mobile, stack them vertically.
+
+Do not invent additional testimonials, ratings, or client endorsements.
+
+## 5.7 CONTACT
+
+Section heading:
+
+**CONTACT**
+
+This must be the final section of the homepage.
+
+Display:
+
+**Office Address**
+
+23 Okemesi Crescent, Garki II, Abuja, Nigeria
+
+**Phone Number**
+
+0911 90 42421
+
+**Email**
+
+post@austinmamedulaw.com
+
+austin.mamedu@gmail.com
+
+### Functional requirements
+
+- Phone number must be clickable and open the visitor's phone dialler.
+- Both email addresses must be clickable and open the visitor's email application.
+- Add a button labelled "Send Us an Enquiry" that opens an email to post@austinmamedulaw.com.
+- Include a Google Maps embed or map link showing the office address, provided the location can be verified.
+
+### Visual treatment
+
+Use a strong black background with gold typography and subtle divider lines.
+
+Arrange the contact details in a clean two-column layout on desktop and a single-column layout on mobile.
+
+Include a discreet footer containing:
+
+Austin Mamedu & Co.
+
+Solicitors | Research | Consulting
+
+© 2026 Austin Mamedu & Co. All rights reserved.
+
+Include links to Home, Our Work, and Your Lawyers.
+
+---
+
+# 6. OUR WORK PAGE
+
+The Our Work page should communicate the firm's research capabilities, professional infrastructure, international development experience, and exposure to international organisations.
+
+It must contain the following sections in this order:
+
+1. Page introduction
+2. Case Management & Research
+3. International Development Law and INGOs & UN Agencies Experience
+4. Some of Our Research Studies
+5. Contact/footer
+
+## 6.1 PAGE INTRODUCTION
+
+Display:
+
+**OUR WORK**
+
+Suggested supporting statement:
+
+"Professional legal services informed by rigorous research, international experience, and a commitment to excellence."
+
+Use a sophisticated black hero section with large serif typography and a restrained gold accent.
+
+The page introduction should have a smooth reveal animation.
+
+## 6.2 CASE MANAGEMENT & RESEARCH
+
+Section heading:
+
+**CASE MANAGEMENT & RESEARCH**
+
+Display the following text:
+
+"Our professional services are backed by solicitors’ case management software and the use of online legal research portals such as LPELR, LexisNexis, eu-lex, Westlaw, and bailii. This ensures up-to-date knowledge of developments in the law."
+
+### Design direction
+
+Present this section as an editorial layout.
+
+Use a split composition:
+- Section heading and descriptive text on one side.
+- A tasteful visual representing legal research, digital legal resources, or organised case management on the other.
+
+Use restrained animation:
+- Text reveal.
+- Image fade-in.
+- Gold line drawing animation.
+- Gentle parallax movement.
+
+Do not invent software names, proprietary platforms, or additional research capabilities.
+
+## 6.3 INTERNATIONAL DEVELOPMENT LAW AND INGOs & UN AGENCIES EXPERIENCE
+
+Section heading:
+
+**INTERNATIONAL DEVELOPMENT LAW AND INGOs & UN AGENCIES EXPERIENCE**
+
+Display the following text:
+
+"Augustine was admitted in 2008 as a member of the Law Society of Ireland’s Rule of Law Project. The firm and/or its partners have consulted for international organisations such as UNICEF, IOM, African Child Policy Forum, SOS Children’s Villages, Save the Children International, etc."
+
+### Image integration
+
+Use the following supplied images:
+
+- IDL_2
+- IDL_3
+- IDL_4
+- IDL_5
+
+Note: IDL_2 appears twice in the original asset list. Use the supplied IDL_2 image once unless two distinct files with that name are provided.
+
+### Design direction
+
+This should be one of the most visually interesting sections of the website.
+
+Create an editorial photo gallery with an asymmetrical grid.
+
+Suggested arrangement:
+- One large featured photograph.
+- Three smaller photographs arranged around it.
+- Text positioned alongside or between the images.
+
+Use elegant image reveals, subtle scale transitions, and restrained parallax.
+
+The images should feel like documentation of professional experience and international engagement, not decorative stock photographs.
+
+## 6.4 SOME OF OUR RESEARCH STUDIES
+
+Section heading:
+
+**SOME OF OUR RESEARCH STUDIES**
+
+Use the following photographs:
+
+- research_1
+- research_2
+- research_3
+- research_4
+- research_5
+- research_6
+- research_7
+
+### Design direction
+
+Create a sophisticated research gallery.
+
+The images should be arranged in an editorial grid rather than a basic slideshow.
+
+Use:
+- A mixture of large and small image tiles.
+- Consistent spacing.
+- Subtle gold borders or separators.
+- Hover effects that reveal a restrained gold overlay.
+- Scroll-triggered image reveals.
+
+Where appropriate, allow visitors to click an image to view it in a larger lightbox.
+
+Do not invent research titles, publication dates, research findings, or descriptions that have not been provided.
+
+The gallery should remain visually attractive even if the images are primarily photographs of documents or research materials.
+
+## 6.5 CONTACT AND FOOTER
+
+Use the same contact information and footer design as the homepage.
+
+The footer should maintain consistency across all pages.
+
+---
+
+# 7. YOUR LAWYERS PAGE
+
+This page should introduce the firm's principal lawyer, Augustine Mamedu, and the partners and associates who support the practice.
+
+The overall design should feel personal, distinguished, and professional.
+
+It must contain:
+
+1. Page introduction
+2. Augustine Mamedu profile
+3. Partners & Associates
+4. Contact/footer
+
+## 7.1 PAGE INTRODUCTION
+
+Display:
+
+**YOUR LAWYERS**
+
+Suggested supporting statement:
+
+"Experienced legal professionals committed to excellence in practice, advocacy, and research."
+
+Use a black background, elegant serif typography, and subtle gold accents.
+
+## 7.2 AUGUSTINE MAMEDU
+
+Display the following biographical content:
+
+"Augustine Mamedu is a 1985 graduate of the University of Benin. He was called to the Nigerian Bar in 1986. With a strong interest in internationalizing his legal practice and skills, Augustine studied at BPP University London, Griffith College Dublin, and The Law School of The Law Society of Ireland, and was admitted as a solicitor by the Supreme Court of England & Wales in 2006 and by the Supreme Court of Ireland in 2007.
+
+With practice experience from 3 jurisdictions, Augustine Mamedu is an international solicitor."
+
+### Image integration
+
+Use the following photographs:
+
+- lawyer_1
+- lawyer_2
+- lawyer_3
+- lawyer_4
+
+### Design direction
+
+This should be a prominent profile section.
+
+Use one large portrait as the primary image, with the other three photographs arranged in a sophisticated supporting gallery.
+
+The image layout should feel like an editorial profile of a distinguished legal professional.
+
+Suggested arrangement:
+- Large portrait on the left.
+- Name, professional biography, and credentials on the right.
+- Three supporting photographs below or alongside the main portrait.
+
+Use subtle scroll-triggered animations.
+
+### Professional milestones
+
+Consider presenting the following information in a restrained horizontal timeline or credential layout:
+
+**1985** — Graduated from the University of Benin.
+
+**1986** — Called to the Nigerian Bar.
+
+**2006** — Admitted as a solicitor by the Supreme Court of England & Wales.
+
+**2007** — Admitted as a solicitor by the Supreme Court of Ireland.
+
+The milestones should appear progressively as the user scrolls.
+
+Do not add qualifications or professional memberships that are not stated in the supplied biography.
+
+## 7.3 PARTNERS & ASSOCIATES
+
+Section heading:
+
+**PARTNERS & ASSOCIATES**
+
+Display the following text:
+
+"Augustine Mamedu is assisted by Habiba Saddiq, LL.B, BL, LL.M; Favourite Okoronma, LL.B, BL. We train for and emphasise finesse in drafting, organised and eloquent advocacy, and IT skills."
+
+### Design direction
+
+Present this as a clean professional team section.
+
+Use individual profile cards or a refined editorial layout.
+
+The cards should contain:
+- Name.
+- Academic/professional qualifications.
+- A restrained gold accent.
+- Optional portrait placeholders if additional photographs are supplied later.
+
+Do not invent biographies, practice specialisations, job titles, or professional qualifications for Habiba Saddiq or Favourite Okoronma.
+
+Augustine Mamedu should remain the central profile of the page.
+
+---
+
+# 8. SCROLLYTELLING AND ANIMATION SYSTEM
+
+Scrollytelling is a major design requirement.
+
+The website should use scroll-driven animations throughout the three pages, but these animations must be sophisticated, restrained, and purposeful.
+
+The objective is to make the website feel immersive and memorable without distracting visitors from the legal content.
+
+## 8.1 Recommended animations
+
+Implement the following:
+
+**A. Scroll-triggered text reveals**
+
+Headings and paragraphs should fade into view and move gently upwards as visitors reach each section.
+
+**B. Image parallax**
+
+Photographs should move slightly slower than the page scroll, creating a subtle sense of depth.
+
+**C. Progressive image reveals**
+
+Images should be revealed using elegant clipping, masking, or opacity transitions.
+
+**D. Animated gold divider lines**
+
+Thin gold lines should gradually extend into position as sections enter the viewport.
+
+**E. Section transitions**
+
+Use smooth transitions between black and warm ivory sections.
+
+**F. Sticky editorial sections**
+
+Where suitable, use sticky positioning to hold a heading or image in place while accompanying text scrolls past.
+
+**G. Timeline animations**
+
+Professional milestones and historical dates should reveal progressively as the visitor scrolls.
+
+**H. Navigation transitions**
+
+The navigation bar should transition smoothly between transparent and solid black states as the visitor scrolls.
+
+## 8.2 Animation restrictions
+
+- Do not animate every element independently.
+- Avoid excessive zooming, spinning, bouncing, or elastic effects.
+- Do not use constant background movement.
+- Avoid long delays that make visitors wait for content.
+- Never hide essential information behind an animation that may fail to load.
+- All content must remain accessible if JavaScript animations are unavailable.
+- Respect prefers-reduced-motion settings.
+- Ensure smooth performance on mobile devices.
+
+Animations should generally last between 400ms and 900ms, depending on the effect.
+
+Use scroll-triggered animation libraries such as GSAP with ScrollTrigger or Framer Motion where appropriate. Use native CSS and Intersection Observer for simpler effects.
+
+---
+
+# 9. RESPONSIVE DESIGN
+
+The website must be fully responsive.
+
+Optimise for:
+- Desktop screens.
+- Laptops.
+- Tablets.
+- Mobile phones.
+
+### Desktop
+
+Use wide editorial layouts, asymmetrical image galleries, generous spacing, and large typography.
+
+### Tablet
+
+Adjust image grids and typography while preserving the visual hierarchy.
+
+### Mobile
+
+- Stack split-screen layouts vertically.
+- Use a collapsible navigation menu.
+- Ensure images display without awkward cropping.
+- Reduce or disable complex parallax effects.
+- Keep typography readable.
+- Ensure buttons and links are easy to tap.
+- Avoid horizontal scrolling.
+- Maintain smooth page transitions.
+
+The website must feel intentionally designed for mobile rather than merely compressed from desktop.
+
+---
+
+# 10. TECHNICAL IMPLEMENTATION REQUIREMENTS
+
+Build a functional multi-page website, not a static mock-up.
+
+## 10.1 Recommended technology
+
+Use:
+
+- React.
+- TypeScript.
+- Tailwind CSS.
+- Framer Motion or GSAP ScrollTrigger for animation.
+- React Router or an equivalent routing solution.
+- Lucide icons where icons are required.
+
+Use a clean, reusable component architecture.
+
+## 10.2 Suggested component structure
+
+Create reusable components for:
+
+- Navbar
+- MobileNavigation
+- IntroAnimation
+- HeroSection
+- SectionHeading
+- ScrollReveal
+- ParallaxImage
+- EditorialImageGrid
+- Timeline
+- TestimonialSection
+- ContactSection
+- Footer
+- PageTransition
+
+Each primary page should be a separate route:
+
+- `/` — Home
+- `/our-work` — Our Work
+- `/your-lawyers` — Your Lawyers
+
+All navigation links must work correctly.
+
+## 10.3 Image and asset management
+
+The following images are expected to be supplied as project assets:
+
+**Home / Establishment**
+- establishment_1
+- establishment_2
+- establishment_3
+
+**Our Work / International Development Law**
+- IDL_2
+- IDL_3
+- IDL_4
+- IDL_5
+
+**Our Work / Research Studies**
+- research_1
+- research_2
+- research_3
+- research_4
+- research_5
+- research_6
+- research_7
+
+**Your Lawyers**
+- lawyer_1
+- lawyer_2
+- lawyer_3
+- lawyer_4
+
+Use the actual supplied files. Do not replace them with unrelated stock photographs.
+
+If an image is unavailable during development, create a visually appropriate placeholder that can be replaced later.
+
+Organise images in clearly labelled folders, for example:
+
+`/public/images/establishment/`
+
+`/public/images/international-development/`
+
+`/public/images/research/`
+
+`/public/images/lawyers/`
+
+Use optimised image formats where possible, lazy loading for below-the-fold images, and responsive image sizing.
+
+## 10.4 Performance
+
+The website should load quickly despite its visual effects.
+
+Implement:
+- Lazy loading.
+- Image optimisation.
+- Efficient animation techniques.
+- Code splitting where appropriate.
+- Avoidance of unnecessarily large dependencies.
+- Reduced-motion fallbacks.
+
+Do not allow animation libraries to compromise basic page loading or usability.
+
+## 10.5 SEO
+
+Implement appropriate SEO foundations.
+
+Include:
+- Unique page titles.
+- Meta descriptions.
+- Open Graph metadata.
+- Descriptive image alt text.
+- Semantic HTML.
+- Logical heading hierarchy.
+- Search-engine-friendly page URLs.
+
+Suggested homepage title:
+
+Austin Mamedu & Co. | Solicitors, Research & Consulting
+
+Suggested homepage description:
+
+Austin Mamedu & Co. is an established Nigerian law firm providing legal advisory, legislative drafting, litigation, corporate services, and international development law expertise.
+
+Do not add unverified claims to SEO descriptions.
+
+## 10.6 Accessibility
+
+Ensure:
+- Sufficient colour contrast.
+- Keyboard-accessible navigation.
+- Visible focus indicators.
+- Appropriate image alt text.
+- Semantic HTML elements.
+- Accessible menus.
+- Reduced-motion support.
+- Readable text sizes.
+
+---
+
+# 11. CONTENT ACCURACY AND LEGAL CREDIBILITY
+
+This is a law firm's official website. Accuracy and professional credibility are essential.
+
+Follow these rules strictly:
+
+1. Preserve the supplied legal and biographical information.
+2. Do not invent client names, case histories, legal awards, accreditations, or professional memberships.
+3. Do not invent testimonials or attribute statements to individuals who have not provided them.
+4. Do not invent additional legal practice areas.
+5. Do not create fictitious research publications or case studies.
+6. Do not alter the meaning of the supplied testimonials.
+7. Do not make unsupported claims about the firm's success rate or legal outcomes.
+8. Keep the firm's contact information consistent across all pages.
+9. Use professional language throughout.
+10. Treat the supplied content as the authoritative source.
+
+The website should communicate experience and credibility through the information provided, the quality of the design, and the presentation of the firm's actual photographs.
+
+---
+
+# 12. FINAL DESIGN EXPECTATIONS
+
+The final website should have the following qualities:
+
+**VISUAL IDENTITY:** Predominantly black, restrained antique gold, elegant serif typography, and refined corporate presentation.
+
+**USER EXPERIENCE:** Smooth navigation, intuitive page structure, excellent readability, and responsive layouts.
+
+**SCROLLYTELLING:** Meaningful scroll-driven animations, image reveals, parallax, animated dividers, and timeline transitions.
+
+**PROFESSIONALISM:** A serious and credible legal identity appropriate for a firm with a history dating back to 1988 and international professional exposure.
+
+**IMAGE PRESENTATION:** Actual photographs should be incorporated into sophisticated editorial compositions rather than basic image grids.
+
+**FUNCTIONALITY:** All navigation, email links, phone links, page routes, and interactive elements must work.
+
+**CONTENT:** All supplied content must be included in the correct sections and presented without factual distortion.
+
+---
+
+# 13. IMPLEMENTATION INSTRUCTIONS FOR GOOGLE AI STUDIO
+
+Build the website progressively, but deliver a complete and functional implementation.
+
+Before writing the code:
+
+1. Review the full specification.
+2. Identify all pages, sections, components, and required assets.
+3. Establish a consistent design system.
+4. Plan the animation behaviour across the website.
+5. Establish the routing and component architecture.
+
+Then implement the complete website.
+
+### Important implementation priorities
+
+- Do not stop after generating the homepage.
+- Build all three pages.
+- Do not omit any supplied content.
+- Do not substitute generic placeholder content for the supplied text.
+- Do not create a generic law firm template.
+- Do not make the website look like a typical AI-generated landing page.
+- Do not overuse cards, rounded rectangles, gradients, or generic icons.
+- Pay particular attention to typography, spacing, image composition, and transitions.
+- Ensure the website works on mobile and desktop.
+- Ensure that the navigation between pages works.
+- Ensure that all supplied images are correctly mapped to their respective sections.
+
+If an asset is missing, continue building the website using a clearly labelled placeholder rather than stopping the implementation.
+
+**The desired result is a premium, editorial-style website for an established international law firm: authoritative, elegant, immersive, and unmistakably professional.**

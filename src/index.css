@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #080808;
+  --color-surface: #111111;
+  --color-foreground: #F5F2EB;
+  --color-muted: #A6A29A;
+  --color-border: #3B3220;
+  --color-primary: #C5A15A;
+  --color-primary-foreground: #080808;
+  --color-accent: #D8C18A;
+
+  --color-ivory: #F3EFE6;
+  --color-ivory-surface: #EAE3D5;
+  --color-ivory-ink: #12110F;
+  --color-ivory-muted: #4E4A42;
+  --color-ivory-gold: #7E6024;
+  --color-ivory-border: #CFC5B1;
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "Geist Mono", monospace;
+
+  --text-hero: clamp(2.75rem, 2rem + 3.4vw, 5.25rem);
+  --text-hero--line-height: 1.04;
+  --text-hero--font-weight: 500;
+
+  --text-display: clamp(2.15rem, 1.65rem + 2vw, 3.6rem);
+  --text-display--line-height: 1.08;
+  --text-display--font-weight: 500;
+
+  --text-title: clamp(1.45rem, 1.2rem + 0.9vw, 2.15rem);
+  --text-title--line-height: 1.18;
+  --text-title--font-weight: 500;
+
+  --radius-card: 0.125rem;
+  --radius-control: 0.125rem;
+  --shadow-surface: 0 0 transparent;
+}
+
+html {
+  font-synthesis-weight: none;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *:not(.animate-spin):not(.animate-pulse),
+  *:not(.animate-spin):not(.animate-pulse)::before,
+  *:not(.animate-spin):not(.animate-pulse)::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
