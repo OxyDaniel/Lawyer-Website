@@ -8,6 +8,7 @@ import {
   ScrollReveal,
 } from '../components/ScrollReveal';
 import { ContactSection } from '../components/ContactSection';
+import { LogoWatermark } from '../components/BrandLogo';
 
 const RESEARCH_PORTALS = [
   { code: '01', name: 'LPELR', scope: 'LawPavilion Electronic Law Reports' },
@@ -56,11 +57,25 @@ export function OurWorkPage() {
           aria-labelledby="our-work-heading"
           className="relative overflow-hidden border-b border-primary/30 bg-background px-6 pt-32 pb-20 md:px-12 md:pt-44 md:pb-28"
         >
-          <div className="mx-auto max-w-[90rem]">
+          {/* Subtle Page Header Gold Watermark */}
+          <LogoWatermark
+            variant="gold"
+            position="center-right"
+            scale="w-[560px] md:w-[860px] lg:w-[1040px]"
+            opacityClassName="opacity-[0.05] md:opacity-[0.065]"
+          />
+          <div className="relative z-10 mx-auto max-w-[90rem]">
             <ScrollReveal>
-              <p className="font-mono text-xs uppercase tracking-widest text-primary">
-                Austin Mamedu &amp; Co. · Practice &amp; Research Portfolio
-              </p>
+              <div className="flex items-center gap-3 mb-2">
+                <img
+                  src="/assets/brand/amco_logo_gold.png"
+                  alt="AM&Co. mark"
+                  className="h-6 w-auto object-contain opacity-90"
+                />
+                <p className="font-mono text-xs uppercase tracking-widest text-primary">
+                  Austin Mamedu &amp; Co. · Practice &amp; Research Portfolio
+                </p>
+              </div>
               <h1
                 id="our-work-heading"
                 className="mt-4 font-display text-hero font-medium tracking-tight text-foreground"
@@ -83,9 +98,15 @@ export function OurWorkPage() {
         {/* 6.2 CASE MANAGEMENT & RESEARCH */}
         <section
           aria-labelledby="case-management-heading"
-          className="border-b border-primary/25 bg-background px-6 py-24 md:px-12 md:py-36"
+          className="relative overflow-hidden border-b border-primary/25 bg-background px-6 py-24 md:px-12 md:py-36"
         >
-          <div className="mx-auto max-w-[90rem]">
+          <LogoWatermark
+            variant="gold"
+            position="bottom-left"
+            scale="w-[480px] md:w-[740px]"
+            opacityClassName="opacity-[0.035] md:opacity-[0.045]"
+          />
+          <div className="relative z-10 mx-auto max-w-[90rem]">
             <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Left Column: Heading, Text & Research Portals Index */}
               <div className="min-w-0 lg:col-span-6">
@@ -188,9 +209,16 @@ export function OurWorkPage() {
         {/* 6.3 INTERNATIONAL DEVELOPMENT LAW AND INGOs & UN AGENCIES EXPERIENCE */}
         <section
           aria-labelledby="idl-heading"
-          className="border-b border-primary/30 bg-ivory px-6 py-24 text-ivory-ink md:px-12 md:py-36"
+          className="relative overflow-hidden border-b border-primary/30 bg-ivory px-6 py-24 text-ivory-ink md:px-12 md:py-36"
         >
-          <div className="mx-auto max-w-[90rem]">
+          {/* Subtle Dark Gold Watermark for Warm Ivory Surface */}
+          <LogoWatermark
+            variant="darkGold"
+            position="center"
+            scale="w-[540px] md:w-[840px] lg:w-[1020px]"
+            opacityClassName="opacity-[0.055] md:opacity-[0.075]"
+          />
+          <div className="relative z-10 mx-auto max-w-[90rem]">
             <ScrollReveal>
               <p className="font-mono text-xs uppercase tracking-widest text-ivory-gold">
                 02 · International Mandate
@@ -343,9 +371,15 @@ export function OurWorkPage() {
         <section
           id="research-studies"
           aria-labelledby="research-studies-heading"
-          className="bg-background px-6 py-24 md:px-12 md:py-36"
+          className="relative overflow-hidden bg-background px-6 py-24 md:px-12 md:py-36"
         >
-          <div className="mx-auto max-w-[90rem]">
+          <LogoWatermark
+            variant="gold"
+            position="bottom-right"
+            scale="w-[560px] md:w-[880px] lg:w-[1060px]"
+            opacityClassName="opacity-[0.035] md:opacity-[0.05]"
+          />
+          <div className="relative z-10 mx-auto max-w-[90rem]">
             <ScrollReveal>
               <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                 <div>

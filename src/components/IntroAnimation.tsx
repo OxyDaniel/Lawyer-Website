@@ -78,6 +78,22 @@ export function IntroAnimation() {
           </div>
 
           <div className="flex w-full max-w-4xl flex-col items-center text-center">
+            {/* Converted Gold Brand Mark Reveal */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.85, y: -6 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="mb-6 flex flex-col items-center"
+            >
+              <div className="relative flex items-center justify-center p-2">
+                <img
+                  src="/assets/brand/amco_logo_gold_hi.png"
+                  alt="Austin Mamedu & Co. logo mark"
+                  className="h-16 w-auto object-contain sm:h-20 drop-shadow-[0_2px_12px_rgba(197,161,90,0.18)]"
+                />
+              </div>
+            </motion.div>
+
             <motion.div
               initial={{ scaleX: 0.15, opacity: 0.5 }}
               animate={{ scaleX: 1, opacity: 1 }}
@@ -96,7 +112,7 @@ export function IntroAnimation() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
                     duration: 0.65,
-                    delay: 0.12 + idx * 0.16,
+                    delay: 0.25 + idx * 0.16,
                     ease: [0.22, 1, 0.36, 1],
                   }}
                   className={word === '&' ? 'text-primary italic font-normal' : ''}
@@ -109,7 +125,7 @@ export function IntroAnimation() {
             <motion.p
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.85, ease: 'easeOut' }}
+              transition={{ duration: 0.7, delay: 0.95, ease: 'easeOut' }}
               className="mt-5 font-display text-lg italic tracking-wide text-accent sm:text-xl md:text-2xl"
             >
               Solicitors | Research | Consulting

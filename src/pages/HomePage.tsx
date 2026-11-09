@@ -13,6 +13,7 @@ import {
   ScrollReveal,
 } from '../components/ScrollReveal';
 import { ContactSection } from '../components/ContactSection';
+import { LogoWatermark } from '../components/BrandLogo';
 
 const PRACTICE_AREAS = [
   'Legislative Drafting',
@@ -38,6 +39,14 @@ export function HomePage() {
           aria-labelledby="hero-heading"
           className="relative flex min-h-dvh flex-col justify-between overflow-hidden border-b border-primary/30 bg-background px-6 pt-28 pb-12 md:px-12 md:pt-36 md:pb-16"
         >
+          {/* Monumental Low-Opacity Background Watermark */}
+          <LogoWatermark
+            variant="gold"
+            position="center-right"
+            scale="w-[660px] md:w-[980px] lg:w-[1180px]"
+            opacityClassName="opacity-[0.055] md:opacity-[0.08]"
+          />
+
           {/* Restrained architectural brass hairlines in background */}
           <div
             aria-hidden="true"
@@ -68,6 +77,29 @@ export function HomePage() {
             <div className="grid grid-cols-1 items-end gap-12 lg:grid-cols-12">
               <div className="min-w-0 lg:col-span-8">
                 <ScrollReveal yOffset={16}>
+                  {/* Strongly Present Corporate Monogram Seal on Hero Screen */}
+                  <div className="mb-7 flex items-center gap-4">
+                    <div className="relative flex h-16 w-16 sm:h-20 sm:w-20 shrink-0 items-center justify-center border border-primary/50 bg-surface/90 p-2.5 shadow-[0_4px_24px_rgba(197,161,90,0.14)]">
+                      <img
+                        src="/assets/brand/amco_logo_gold_hi.png"
+                        alt="Austin Mamedu & Co. official logo monogram"
+                        className="h-full w-full object-contain"
+                      />
+                      <span className="absolute -top-1 -left-1 h-2 w-2 border-t border-l border-primary" />
+                      <span className="absolute -top-1 -right-1 h-2 w-2 border-t border-r border-primary" />
+                      <span className="absolute -bottom-1 -left-1 h-2 w-2 border-b border-l border-primary" />
+                      <span className="absolute -bottom-1 -right-1 h-2 w-2 border-b border-r border-primary" />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="font-mono text-xs uppercase tracking-widest text-primary font-medium">
+                        AM&amp;Co. Corporate Monogram
+                      </span>
+                      <span className="font-mono text-[11px] tracking-wider text-muted">
+                        Solicitors | Research | Consulting · Est. 1988
+                      </span>
+                    </div>
+                  </div>
+
                   <h1
                     id="hero-heading"
                     className="font-display text-hero font-medium tracking-tight text-foreground"
@@ -111,12 +143,25 @@ export function HomePage() {
               <div className="min-w-0 lg:col-span-4">
                 <ScrollReveal
                   delay={0.25}
-                  className="border border-primary/30 bg-surface/90 p-6 md:p-8"
+                  className="relative overflow-hidden border border-primary/30 bg-surface/90 p-6 md:p-8"
                 >
-                  <p className="font-mono text-xs uppercase tracking-widest text-primary">
-                    Practice Pedigree
-                  </p>
-                  <dl className="mt-5 divide-y divide-primary/20">
+                  <LogoWatermark
+                    variant="gold"
+                    position="bottom-right"
+                    scale="w-[280px]"
+                    opacityClassName="opacity-[0.04]"
+                  />
+                  <div className="relative z-10 flex items-center justify-between border-b border-primary/20 pb-3 mb-2">
+                    <p className="font-mono text-xs uppercase tracking-widest text-primary">
+                      Practice Pedigree
+                    </p>
+                    <img
+                      src="/assets/brand/amco_logo_gold.png"
+                      alt="AM&Co. emblem"
+                      className="h-6 w-auto object-contain opacity-85"
+                    />
+                  </div>
+                  <dl className="relative z-10 mt-3 divide-y divide-primary/20">
                     <div className="py-3.5 first:pt-0">
                       <dt className="text-xs text-muted">Foundation</dt>
                       <dd className="mt-1 font-display text-lg text-foreground">
@@ -160,9 +205,15 @@ export function HomePage() {
         <section
           id="about-us"
           aria-labelledby="about-heading"
-          className="border-b border-primary/25 bg-background px-6 py-24 md:px-12 md:py-36"
+          className="relative overflow-hidden border-b border-primary/25 bg-background px-6 py-24 md:px-12 md:py-36"
         >
-          <div className="mx-auto max-w-[90rem]">
+          <LogoWatermark
+            variant="gold"
+            position="bottom-left"
+            scale="w-[480px] md:w-[740px]"
+            opacityClassName="opacity-[0.035] md:opacity-[0.045]"
+          />
+          <div className="relative z-10 mx-auto max-w-[90rem]">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Left sticky editorial column */}
               <div className="min-w-0 lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
@@ -250,7 +301,13 @@ export function HomePage() {
           aria-labelledby="motto-heading"
           className="relative overflow-hidden border-b border-primary/30 bg-surface px-6 py-28 md:px-12 md:py-40"
         >
-          <div className="mx-auto max-w-5xl text-center">
+          <LogoWatermark
+            variant="gold"
+            position="center"
+            scale="w-[460px] md:w-[720px]"
+            opacityClassName="opacity-[0.045] md:opacity-[0.06]"
+          />
+          <div className="relative z-10 mx-auto max-w-5xl text-center">
             <ScrollReveal>
               <h2
                 id="motto-heading"
@@ -287,9 +344,16 @@ export function HomePage() {
         <section
           id="establishment"
           aria-labelledby="establishment-heading"
-          className="border-b border-primary/35 bg-ivory px-6 py-24 text-ivory-ink md:px-12 md:py-36"
+          className="relative overflow-hidden border-b border-primary/35 bg-ivory px-6 py-24 text-ivory-ink md:px-12 md:py-36"
         >
-          <div className="mx-auto max-w-[90rem]">
+          {/* Subtle Dark Gold Watermark tuned for warm ivory surface */}
+          <LogoWatermark
+            variant="darkGold"
+            position="center-right"
+            scale="w-[520px] md:w-[840px] lg:w-[1020px]"
+            opacityClassName="opacity-[0.055] md:opacity-[0.075]"
+          />
+          <div className="relative z-10 mx-auto max-w-[90rem]">
             <ScrollReveal>
               <div className="flex flex-col gap-4 border-b border-ivory-border pb-8 md:flex-row md:items-end md:justify-between">
                 <div>
@@ -477,9 +541,15 @@ export function HomePage() {
         <section
           id="client-care"
           aria-labelledby="client-care-heading"
-          className="border-b border-primary/25 bg-background px-6 py-28 md:px-12 md:py-36"
+          className="relative overflow-hidden border-b border-primary/25 bg-background px-6 py-28 md:px-12 md:py-36"
         >
-          <div className="mx-auto max-w-5xl">
+          <LogoWatermark
+            variant="gold"
+            position="bottom-right"
+            scale="w-[460px] md:w-[700px]"
+            opacityClassName="opacity-[0.04] md:opacity-[0.05]"
+          />
+          <div className="relative z-10 mx-auto max-w-5xl">
             <ScrollReveal>
               <p className="font-mono text-xs uppercase tracking-widest text-primary">
                 03 · Professional Standard
@@ -506,9 +576,15 @@ export function HomePage() {
         <section
           id="testimonials"
           aria-labelledby="testimonials-heading"
-          className="bg-surface px-6 py-24 md:px-12 md:py-36"
+          className="relative overflow-hidden bg-surface px-6 py-24 md:px-12 md:py-36"
         >
-          <div className="mx-auto max-w-[90rem]">
+          <LogoWatermark
+            variant="gold"
+            position="center"
+            scale="w-[520px] md:w-[820px]"
+            opacityClassName="opacity-[0.035] md:opacity-[0.045]"
+          />
+          <div className="relative z-10 mx-auto max-w-[90rem]">
             <ScrollReveal>
               <p className="font-mono text-xs uppercase tracking-widest text-primary">
                 04 · Judicial &amp; Professional Commendations

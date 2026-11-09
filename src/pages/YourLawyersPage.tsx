@@ -12,6 +12,7 @@ import {
 } from '../components/ScrollReveal';
 import { Timeline } from '../components/Timeline';
 import { ContactSection } from '../components/ContactSection';
+import { LogoWatermark } from '../components/BrandLogo';
 
 export function YourLawyersPage() {
   useEffect(() => {
@@ -33,11 +34,25 @@ export function YourLawyersPage() {
           aria-labelledby="your-lawyers-heading"
           className="relative overflow-hidden border-b border-primary/30 bg-background px-6 pt-32 pb-20 md:px-12 md:pt-44 md:pb-28"
         >
-          <div className="mx-auto max-w-[90rem]">
+          {/* Subtle Page Header Gold Watermark */}
+          <LogoWatermark
+            variant="gold"
+            position="center-right"
+            scale="w-[560px] md:w-[860px] lg:w-[1040px]"
+            opacityClassName="opacity-[0.05] md:opacity-[0.065]"
+          />
+          <div className="relative z-10 mx-auto max-w-[90rem]">
             <ScrollReveal>
-              <p className="font-mono text-xs uppercase tracking-widest text-primary">
-                Austin Mamedu &amp; Co. · Counsel &amp; Practice Leadership
-              </p>
+              <div className="flex items-center gap-3 mb-2">
+                <img
+                  src="/assets/brand/amco_logo_gold.png"
+                  alt="AM&Co. emblem"
+                  className="h-6 w-auto object-contain opacity-90"
+                />
+                <p className="font-mono text-xs uppercase tracking-widest text-primary">
+                  Austin Mamedu &amp; Co. · Counsel &amp; Practice Leadership
+                </p>
+              </div>
               <h1
                 id="your-lawyers-heading"
                 className="mt-4 font-display text-hero font-medium tracking-tight text-foreground"
@@ -60,18 +75,32 @@ export function YourLawyersPage() {
         {/* 7.2 AUGUSTINE MAMEDU PROFILE */}
         <section
           aria-labelledby="augustine-mamedu-heading"
-          className="border-b border-primary/30 bg-background px-6 py-24 md:px-12 md:py-36"
+          className="relative overflow-hidden border-b border-primary/30 bg-background px-6 py-24 md:px-12 md:py-36"
         >
-          <div className="mx-auto max-w-[90rem]">
+          {/* Watermark representing Augustine Mamedu (AM) monogram */}
+          <LogoWatermark
+            variant="gold"
+            position="bottom-right"
+            scale="w-[520px] md:w-[820px] lg:w-[1020px]"
+            opacityClassName="opacity-[0.045] md:opacity-[0.06]"
+          />
+          <div className="relative z-10 mx-auto max-w-[90rem]">
             <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
               {/* Left Column: Primary Portrait (lawyer_1) */}
               <div className="min-w-0 lg:col-span-5">
                 <ScrollReveal>
                   <figure className="border border-primary/35 bg-surface p-6 md:p-8">
                     <div className="mb-4 flex items-center justify-between border-b border-primary/20 pb-3">
-                      <span className="font-mono text-xs uppercase tracking-widest text-primary">
-                        Principal Solicitor
-                      </span>
+                      <div className="flex items-center gap-2.5">
+                        <img
+                          src="/assets/brand/amco_logo_gold.png"
+                          alt="AM logo"
+                          className="h-5 w-auto object-contain opacity-90"
+                        />
+                        <span className="font-mono text-xs uppercase tracking-widest text-primary">
+                          Principal Solicitor
+                        </span>
+                      </div>
                       <span className="font-mono text-xs text-muted">
                         3 Jurisdictions
                       </span>
@@ -188,9 +217,15 @@ export function YourLawyersPage() {
         {/* 7.3 PARTNERS & ASSOCIATES */}
         <section
           aria-labelledby="partners-associates-heading"
-          className="bg-surface px-6 py-24 md:px-12 md:py-36"
+          className="relative overflow-hidden bg-surface px-6 py-24 md:px-12 md:py-36"
         >
-          <div className="mx-auto max-w-[90rem]">
+          <LogoWatermark
+            variant="gold"
+            position="center"
+            scale="w-[500px] md:w-[760px] lg:w-[940px]"
+            opacityClassName="opacity-[0.035] md:opacity-[0.045]"
+          />
+          <div className="relative z-10 mx-auto max-w-[90rem]">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
               <div className="min-w-0 lg:col-span-5">
                 <ScrollReveal>

@@ -4,6 +4,7 @@ import { Mail, MapPin, Phone, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { CONTACT_INFO } from '../data/firmData';
 import { Button, Field } from './ui';
 import { GoldDivider, ScrollReveal } from './ScrollReveal';
+import { LogoWatermark } from './BrandLogo';
 
 function AbujaLocatorMap() {
   return (
@@ -279,9 +280,15 @@ export function ContactSection() {
   return (
     <footer
       id="contact"
-      className="border-t border-primary/35 bg-background text-foreground"
+      className="relative overflow-hidden border-t border-primary/35 bg-background text-foreground"
     >
-      <div className="mx-auto max-w-[90rem] px-6 py-20 md:px-12 md:py-28">
+      <LogoWatermark
+        variant="gold"
+        position="bottom-right"
+        scale="w-[520px] md:w-[760px] lg:w-[920px]"
+        opacityClassName="opacity-[0.035] md:opacity-[0.05]"
+      />
+      <div className="relative z-10 mx-auto max-w-[90rem] px-6 py-20 md:px-12 md:py-28">
         <ScrollReveal>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -486,13 +493,22 @@ export function ContactSection() {
         {/* Discreet Footer */}
         <div className="mt-20 border-t border-primary/25 pt-10">
           <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-            <div>
-              <p className="font-display text-2xl font-medium text-foreground">
-                Austin Mamedu &amp; Co.
-              </p>
-              <p className="mt-1 font-display text-sm italic text-primary">
-                Solicitors | Research | Consulting
-              </p>
+            <div className="flex items-center gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center border border-primary/35 bg-surface p-2">
+                <img
+                  src="/assets/brand/amco_logo_gold.png"
+                  alt="Austin Mamedu & Co. logo mark"
+                  className="h-full w-full object-contain"
+                />
+              </div>
+              <div>
+                <p className="font-display text-2xl font-medium text-foreground">
+                  Austin Mamedu &amp; Co.
+                </p>
+                <p className="mt-0.5 font-display text-sm italic text-primary">
+                  Solicitors | Research | Consulting
+                </p>
+              </div>
             </div>
 
             <nav

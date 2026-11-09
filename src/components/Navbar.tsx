@@ -64,17 +64,26 @@ export function Navbar() {
           : 'border-b border-transparent bg-gradient-to-b from-background/90 to-transparent'
       }`}
     >
-      <div className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-4 md:px-12 md:py-5">
+      <div className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-3.5 md:px-12 md:py-4">
         <Link
           to="/"
-          className="group inline-flex flex-col whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+          className="group inline-flex items-center gap-3 sm:gap-4 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
         >
-          <span className="font-display text-xl font-medium tracking-tight text-foreground transition-colors group-hover:text-accent sm:text-2xl">
-            Austin Mamedu &amp; Co.
-          </span>
-          <span className="font-display text-xs italic tracking-wider text-primary sm:text-sm">
-            Solicitors | Research | Consulting
-          </span>
+          <div className="relative flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center border border-primary/40 bg-surface/80 p-1.5 transition-colors group-hover:border-primary">
+            <img
+              src="/assets/brand/amco_logo_gold.png"
+              alt="Austin Mamedu & Co. logo mark"
+              className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-display text-xl font-medium tracking-tight text-foreground transition-colors group-hover:text-accent sm:text-2xl">
+              Austin Mamedu &amp; Co.
+            </span>
+            <span className="font-display text-xs italic tracking-wider text-primary sm:text-sm">
+              Solicitors | Research | Consulting
+            </span>
+          </div>
         </Link>
 
         <nav

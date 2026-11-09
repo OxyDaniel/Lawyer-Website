@@ -13,6 +13,17 @@ export interface ResearchStudyAsset {
   featured?: boolean;
 }
 
+export const BRAND_LOGO = {
+  gold: '/assets/brand/amco_logo_gold.png',
+  goldHiRes: '/assets/brand/amco_logo_gold_hi.png',
+  white: '/assets/brand/amco_logo_white.png',
+  whiteHiRes: '/assets/brand/amco_logo_white_hi.png',
+  black: '/assets/brand/amco_logo_black.png',
+  darkGold: '/assets/brand/amco_logo_dark_gold.png',
+  darkGoldHiRes: '/assets/brand/amco_logo_dark_gold_hi.png',
+  alt: 'Austin Mamedu & Co. official logo mark representing AM monogram',
+};
+
 export const FIRM_ASSETS = {
   establishment: {
     establishment_1: {
