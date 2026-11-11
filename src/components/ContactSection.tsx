@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Mail, MapPin, Phone, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { CONTACT_INFO } from '../data/firmData';
 import { Button, Field } from './ui';
-import { GoldDivider, ScrollReveal } from './ScrollReveal';
+import { GoldDivider, ScrollReveal, SectionSentinel } from './ScrollReveal';
 import { LogoWatermark } from './BrandLogo';
 
 function AbujaLocatorMap() {
@@ -282,6 +282,7 @@ export function ContactSection() {
       id="contact"
       className="relative overflow-hidden border-t border-primary/35 bg-background text-foreground"
     >
+      <SectionSentinel name="Chambers & Contact" />
       <LogoWatermark
         variant="gold"
         position="bottom-right"

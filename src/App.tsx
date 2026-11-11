@@ -9,6 +9,7 @@ import {
 import { MotionConfig } from 'motion/react';
 import { IntroAnimation } from './components/IntroAnimation';
 import { Navbar } from './components/Navbar';
+import { ActiveSectionProvider } from './components/ScrollReveal';
 import { HomePage } from './pages/HomePage';
 import { OurWorkPage } from './pages/OurWorkPage';
 import { YourLawyersPage } from './pages/YourLawyersPage';
@@ -36,15 +37,17 @@ export default function App() {
   return (
     <MotionConfig reducedMotion="user">
       <BrowserRouter>
-        <RouteScrollManager />
-        <IntroAnimation />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/our-work" element={<OurWorkPage />} />
-          <Route path="/your-lawyers" element={<YourLawyersPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <ActiveSectionProvider>
+          <RouteScrollManager />
+          <IntroAnimation />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/our-work" element={<OurWorkPage />} />
+            <Route path="/your-lawyers" element={<YourLawyersPage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </ActiveSectionProvider>
       </BrowserRouter>
     </MotionConfig>
   );

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { AnimatePresence, motion } from 'motion/react';
+import { Menu, X, ArrowUp } from 'lucide-react';
+import { AnimatePresence, motion, useScroll, useSpring, useReducedMotion } from 'motion/react';
+import { useActiveSection } from './ScrollReveal';
 
 const NAV_ITEMS = [
   { label: 'Home', path: '/' },
@@ -11,13 +12,25 @@ const NAV_ITEMS = [
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const { activeSection } = useActiveSection();
+  const prefersReducedMotion = useReducedMotion();
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 140,
+    damping: 26,
+    restDelta: 0.001,
+  });
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 36);
+      const y = window.scrollY;
+      setScrolled(y > 36);
+      setShowBackToTop(y > 450);
     };
     handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -65,26 +78,36 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-3.5 md:px-12 md:py-4">
-        <Link
-          to="/"
-          className="group inline-flex items-center gap-3 sm:gap-4 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
-        >
-          <div className="relative flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center border border-primary/40 bg-surface/80 p-1.5 transition-colors group-hover:border-primary">
-            <img
-              src="/assets/brand/amco_logo_gold.png"
-              alt="Austin Mamedu & Co. logo mark"
-              className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
-            />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-display text-xl font-medium tracking-tight text-foreground transition-colors group-hover:text-accent sm:text-2xl">
-              Austin Mamedu &amp; Co.
-            </span>
-            <span className="font-display text-xs italic tracking-wider text-primary sm:text-sm">
-              Solicitors | Research | Consulting
-            </span>
-          </div>
-        </Link>
+        <div className="flex items-center gap-6">
+          <Link
+            to="/"
+            className="group inline-flex items-center gap-3 sm:gap-4 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+          >
+            <div className="relative flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center border border-primary/40 bg-surface/80 p-1.5 transition-colors group-hover:border-primary">
+              <img
+                src="/assets/brand/amco_logo_gold.png"
+                alt="Austin Mamedu & Co. logo mark"
+                className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-display text-xl font-medium tracking-tight text-foreground transition-colors group-hover:text-accent sm:text-2xl">
+                Austin Mamedu &amp; Co.
+              </span>
+              <span className="font-display text-xs italic tracking-wider text-primary sm:text-sm">
+                Solicitors | Research | Consulting
+              </span>
+            </div>
+          </Link>
+
+          {/* Active section reading breadcrumb */}
+          {scrolled && activeSection && (
+            <div className="hidden lg:flex items-center gap-2 border-l border-primary/25 pl-5 py-1 text-xs font-mono tracking-widest text-primary/90 uppercase">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <span>{activeSection}</span>
+            </div>
+          )}
+        </div>
 
         <nav
           aria-label="Primary navigation"
@@ -131,6 +154,15 @@ export function Navbar() {
           {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
+
+      {/* Scroll Progress Bar at bottom of Navbar */}
+      {!prefersReducedMotion && (
+        <motion.div
+          style={{ scaleX, transformOrigin: '0%' }}
+          className="pointer-events-none absolute bottom-0 inset-x-0 h-[1.5px] bg-gradient-to-r from-primary via-accent to-primary"
+          aria-hidden="true"
+        />
+      )}
 
       <AnimatePresence>
         {mobileOpen && (

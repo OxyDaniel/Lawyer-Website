@@ -40,6 +40,9 @@ export function BrandLogo({
   );
 }
 
+import { useRef } from 'react';
+import { motion, useScroll, useTransform, useReducedMotion } from 'motion/react';
+
 interface LogoWatermarkProps {
   variant?: LogoVariant;
   className?: string;
@@ -47,6 +50,7 @@ interface LogoWatermarkProps {
   opacityClassName?: string;
   position?: 'center' | 'top-right' | 'bottom-right' | 'bottom-left' | 'top-left' | 'center-right';
   scale?: string;
+  parallax?: boolean;
 }
 
 export function LogoWatermark({
@@ -56,7 +60,21 @@ export function LogoWatermark({
   opacityClassName = 'opacity-[0.045] md:opacity-[0.06]',
   position = 'center',
   scale = 'w-[420px] md:w-[680px] lg:w-[860px]',
+  parallax = true,
 }: LogoWatermarkProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start end', 'end start'],
+  });
+
+  const parallaxY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    prefersReducedMotion || !parallax ? [0, 0] : [-32, 32]
+  );
+
   const positionClasses = {
     center: 'top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
     'center-right': 'top-1/2 right-0 -translate-y-1/2 translate-x-1/6',
@@ -68,11 +86,13 @@ export function LogoWatermark({
 
   return (
     <div
+      ref={containerRef}
       aria-hidden="true"
       className={`pointer-events-none absolute inset-0 overflow-hidden select-none z-0 ${className}`}
     >
-      <div
-        className={`absolute ${positionClasses} ${scale} max-w-none transition-opacity duration-700 ${opacityClassName}`}
+      <motion.div
+        style={{ y: parallaxY }}
+        className={`absolute ${positionClasses} ${scale} max-w-none transition-opacity duration-700 will-change-transform ${opacityClassName}`}
       >
         <BrandLogo
           variant={variant}
@@ -80,7 +100,7 @@ export function LogoWatermark({
           className={`h-auto w-full object-contain ${imgClassName}`}
           loading="lazy"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }

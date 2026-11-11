@@ -8,9 +8,13 @@ import {
 } from '../data/firmData';
 import { ArchivalImage } from '../components/ui';
 import {
+  CurtainImageReveal,
+  EditorialTextReveal,
   GoldDivider,
   ParallaxFrame,
   ScrollReveal,
+  ScrollyQuote,
+  SectionSentinel,
 } from '../components/ScrollReveal';
 import { ContactSection } from '../components/ContactSection';
 import { LogoWatermark } from '../components/BrandLogo';
@@ -39,6 +43,7 @@ export function HomePage() {
           aria-labelledby="hero-heading"
           className="relative flex min-h-dvh flex-col justify-between overflow-hidden border-b border-primary/30 bg-background px-6 pt-28 pb-12 md:px-12 md:pt-36 md:pb-16"
         >
+          <SectionSentinel name="Overview" />
           {/* Monumental Low-Opacity Background Watermark */}
           <LogoWatermark
             variant="gold"
@@ -100,12 +105,14 @@ export function HomePage() {
                     </div>
                   </div>
 
-                  <h1
-                    id="hero-heading"
-                    className="font-display text-hero font-medium tracking-tight text-foreground"
-                  >
-                    Austin Mamedu &amp; Co.
-                  </h1>
+                  <EditorialTextReveal>
+                    <h1
+                      id="hero-heading"
+                      className="font-display text-hero font-medium tracking-tight text-foreground"
+                    >
+                      Austin Mamedu &amp; Co.
+                    </h1>
+                  </EditorialTextReveal>
                   <p className="mt-4 font-display text-2xl italic tracking-wide text-primary sm:text-3xl md:text-4xl">
                     Solicitors | Research | Consulting
                   </p>
@@ -207,6 +214,7 @@ export function HomePage() {
           aria-labelledby="about-heading"
           className="relative overflow-hidden border-b border-primary/25 bg-background px-6 py-24 md:px-12 md:py-36"
         >
+          <SectionSentinel name="01 · Practice Profile" />
           <LogoWatermark
             variant="gold"
             position="bottom-left"
@@ -221,12 +229,14 @@ export function HomePage() {
                   <p className="font-mono text-xs uppercase tracking-widest text-primary">
                     01 · Practice Profile
                   </p>
-                  <h2
-                    id="about-heading"
-                    className="mt-3 font-display text-display text-foreground"
-                  >
-                    About Us
-                  </h2>
+                  <EditorialTextReveal>
+                    <h2
+                      id="about-heading"
+                      className="mt-3 font-display text-display text-foreground"
+                    >
+                      About Us
+                    </h2>
+                  </EditorialTextReveal>
                   <GoldDivider className="mt-6 max-w-xs" />
                   <p className="mt-6 text-sm leading-relaxed text-muted max-w-sm">
                     Multidisciplinary legal advisory combining domestic practice
@@ -270,7 +280,7 @@ export function HomePage() {
                   </p>
                 </ScrollReveal>
 
-                {/* Ruled Practice Index */}
+                {/* Ruled Practice Index with subtle hover illumination */}
                 <ScrollReveal delay={0.22} className="mt-12">
                   <p className="font-mono text-xs uppercase tracking-widest text-primary mb-4">
                     Areas of Specialism
@@ -279,12 +289,12 @@ export function HomePage() {
                     {PRACTICE_AREAS.map((area, idx) => (
                       <div
                         key={area}
-                        className="flex items-center justify-between border-b border-primary/20 py-3.5 pr-4"
+                        className="group flex items-center justify-between border-b border-primary/20 py-3.5 pr-4 transition-colors hover:border-primary/60"
                       >
-                        <span className="font-display text-lg text-foreground">
+                        <span className="font-display text-lg text-foreground transition-colors group-hover:text-accent">
                           {area}
                         </span>
-                        <span className="font-mono text-xs text-primary/80 tabular-nums">
+                        <span className="font-mono text-xs text-primary/80 tabular-nums transition-colors group-hover:text-primary">
                           0{idx + 1}
                         </span>
                       </div>
@@ -301,6 +311,7 @@ export function HomePage() {
           aria-labelledby="motto-heading"
           className="relative overflow-hidden border-b border-primary/30 bg-surface px-6 py-28 md:px-12 md:py-40"
         >
+          <SectionSentinel name="Firm Motto" />
           <LogoWatermark
             variant="gold"
             position="center"
@@ -308,35 +319,17 @@ export function HomePage() {
             opacityClassName="opacity-[0.045] md:opacity-[0.06]"
           />
           <div className="relative z-10 mx-auto max-w-5xl text-center">
-            <ScrollReveal>
-              <h2
-                id="motto-heading"
-                className="font-mono text-xs uppercase tracking-widest text-primary"
-              >
-                Motto
-              </h2>
+            <h2
+              id="motto-heading"
+              className="mb-8 font-mono text-xs uppercase tracking-widest text-primary"
+            >
+              Motto
+            </h2>
 
-              <div
-                aria-hidden="true"
-                className="mt-6 font-display text-6xl leading-none text-primary/60 md:text-7xl"
-              >
-                &ldquo;
-              </div>
-
-              <blockquote className="mt-2">
-                <p className="font-display text-3xl italic leading-snug text-foreground sm:text-4xl md:text-5xl">
-                  &ldquo;In law, a man is guilty when he violates the rights of
-                  others. In ethics, he is guilty if he only thinks of doing
-                  so.&rdquo;
-                </p>
-                <footer className="mt-8">
-                  <GoldDivider origin="center" className="mx-auto mb-5 max-w-28" />
-                  <cite className="not-italic font-mono text-xs uppercase tracking-widest text-accent">
-                    ~ Immanuel Kant
-                  </cite>
-                </footer>
-              </blockquote>
-            </ScrollReveal>
+            <ScrollyQuote
+              quote="In law, a man is guilty when he violates the rights of others. In ethics, he is guilty if he only thinks of doing so."
+              attribution="Immanuel Kant"
+            />
           </div>
         </section>
 
@@ -346,6 +339,7 @@ export function HomePage() {
           aria-labelledby="establishment-heading"
           className="relative overflow-hidden border-b border-primary/35 bg-ivory px-6 py-24 text-ivory-ink md:px-12 md:py-36"
         >
+          <SectionSentinel name="02 · Heritage & Establishment" />
           {/* Subtle Dark Gold Watermark tuned for warm ivory surface */}
           <LogoWatermark
             variant="darkGold"
@@ -360,12 +354,14 @@ export function HomePage() {
                   <p className="font-mono text-xs uppercase tracking-widest text-ivory-gold">
                     02 · Heritage &amp; Institutional Representation
                   </p>
-                  <h2
-                    id="establishment-heading"
-                    className="mt-2 font-display text-display text-ivory-ink"
-                  >
-                    Establishment
-                  </h2>
+                  <EditorialTextReveal>
+                    <h2
+                      id="establishment-heading"
+                      className="mt-2 font-display text-display text-ivory-ink"
+                    >
+                      Establishment
+                    </h2>
+                  </EditorialTextReveal>
                 </div>
                 <p className="font-mono text-xs uppercase tracking-widest text-ivory-muted">
                   3 Medical Road, Ikeja (1988) — Garki II, Abuja (Present)
@@ -425,23 +421,25 @@ export function HomePage() {
                 </ScrollReveal>
               </div>
 
-              {/* Asymmetrical Editorial Gallery of Supplied Establishment Images */}
+              {/* Asymmetrical Editorial Gallery of Supplied Establishment Images with Shutter Curtains */}
               <div className="min-w-0 lg:col-span-6">
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-12">
                   {/* Large Primary Image (establishment_1) */}
                   <ScrollReveal className="sm:col-span-12">
                     <figure className="border border-ivory-gold/40 bg-ivory-surface p-5 md:p-7">
-                      <ParallaxFrame offset={12} className="bg-white p-6 md:p-8">
-                        <ArchivalImage
-                          src={FIRM_ASSETS.establishment.establishment_1.src}
-                          alt={FIRM_ASSETS.establishment.establishment_1.alt}
-                          fallbackTitle={
-                            FIRM_ASSETS.establishment.establishment_1.title
-                          }
-                          className="h-44 w-full sm:h-52"
-                          imgClassName="object-contain"
-                        />
-                      </ParallaxFrame>
+                      <CurtainImageReveal curtainColor="bg-[#E4DFD3]">
+                        <ParallaxFrame offset={12} className="bg-white p-6 md:p-8">
+                          <ArchivalImage
+                            src={FIRM_ASSETS.establishment.establishment_1.src}
+                            alt={FIRM_ASSETS.establishment.establishment_1.alt}
+                            fallbackTitle={
+                              FIRM_ASSETS.establishment.establishment_1.title
+                            }
+                            className="h-44 w-full sm:h-52"
+                            imgClassName="object-contain"
+                          />
+                        </ParallaxFrame>
+                      </CurtainImageReveal>
                       <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-ivory-border pt-3">
                         <span className="font-display text-lg font-medium text-ivory-ink">
                           {FIRM_ASSETS.establishment.establishment_1.title}
@@ -456,17 +454,19 @@ export function HomePage() {
                   {/* Smaller Supporting Image 1 (establishment_2 - asymmetric 5 cols) */}
                   <ScrollReveal delay={0.12} className="sm:col-span-5">
                     <figure className="flex h-full flex-col justify-between border border-ivory-gold/40 bg-ivory-surface p-5">
-                      <ParallaxFrame offset={10} className="bg-white p-5">
-                        <ArchivalImage
-                          src={FIRM_ASSETS.establishment.establishment_2.src}
-                          alt={FIRM_ASSETS.establishment.establishment_2.alt}
-                          fallbackTitle={
-                            FIRM_ASSETS.establishment.establishment_2.title
-                          }
-                          className="h-36 w-full"
-                          imgClassName="object-contain"
-                        />
-                      </ParallaxFrame>
+                      <CurtainImageReveal curtainColor="bg-[#E4DFD3]">
+                        <ParallaxFrame offset={10} className="bg-white p-5">
+                          <ArchivalImage
+                            src={FIRM_ASSETS.establishment.establishment_2.src}
+                            alt={FIRM_ASSETS.establishment.establishment_2.alt}
+                            fallbackTitle={
+                              FIRM_ASSETS.establishment.establishment_2.title
+                            }
+                            className="h-36 w-full"
+                            imgClassName="object-contain"
+                          />
+                        </ParallaxFrame>
+                      </CurtainImageReveal>
                       <figcaption className="mt-4 border-t border-ivory-border pt-3">
                         <span className="block font-display text-base font-medium text-ivory-ink">
                           {FIRM_ASSETS.establishment.establishment_2.title}
@@ -484,17 +484,19 @@ export function HomePage() {
                     className="sm:col-span-7 sm:mt-6"
                   >
                     <figure className="flex h-full flex-col justify-between border border-ivory-gold/40 bg-ivory-surface p-5">
-                      <ParallaxFrame offset={14} className="bg-white p-5">
-                        <ArchivalImage
-                          src={FIRM_ASSETS.establishment.establishment_3.src}
-                          alt={FIRM_ASSETS.establishment.establishment_3.alt}
-                          fallbackTitle={
-                            FIRM_ASSETS.establishment.establishment_3.title
-                          }
-                          className="h-36 w-full"
-                          imgClassName="object-contain"
-                        />
-                      </ParallaxFrame>
+                      <CurtainImageReveal curtainColor="bg-[#E4DFD3]">
+                        <ParallaxFrame offset={14} className="bg-white p-5">
+                          <ArchivalImage
+                            src={FIRM_ASSETS.establishment.establishment_3.src}
+                            alt={FIRM_ASSETS.establishment.establishment_3.alt}
+                            fallbackTitle={
+                              FIRM_ASSETS.establishment.establishment_3.title
+                            }
+                            className="h-36 w-full"
+                            imgClassName="object-contain"
+                          />
+                        </ParallaxFrame>
+                      </CurtainImageReveal>
                       <figcaption className="mt-4 border-t border-ivory-border pt-3">
                         <span className="block font-display text-base font-medium text-ivory-ink">
                           {FIRM_ASSETS.establishment.establishment_3.title}
@@ -543,6 +545,7 @@ export function HomePage() {
           aria-labelledby="client-care-heading"
           className="relative overflow-hidden border-b border-primary/25 bg-background px-6 py-28 md:px-12 md:py-36"
         >
+          <SectionSentinel name="03 · Client Care" />
           <LogoWatermark
             variant="gold"
             position="bottom-right"
@@ -554,12 +557,14 @@ export function HomePage() {
               <p className="font-mono text-xs uppercase tracking-widest text-primary">
                 03 · Professional Standard
               </p>
-              <h2
-                id="client-care-heading"
-                className="mt-3 font-display text-display text-foreground"
-              >
-                Client Care
-              </h2>
+              <EditorialTextReveal>
+                <h2
+                  id="client-care-heading"
+                  className="mt-3 font-display text-display text-foreground"
+                >
+                  Client Care
+                </h2>
+              </EditorialTextReveal>
 
               <div className="mt-10 flex flex-col gap-6 border-l border-primary pl-6 md:pl-10">
                 <p className="font-display text-2xl leading-relaxed text-foreground sm:text-3xl md:text-4xl">
@@ -578,6 +583,7 @@ export function HomePage() {
           aria-labelledby="testimonials-heading"
           className="relative overflow-hidden bg-surface px-6 py-24 md:px-12 md:py-36"
         >
+          <SectionSentinel name="04 · Testimonials" />
           <LogoWatermark
             variant="gold"
             position="center"
@@ -589,12 +595,14 @@ export function HomePage() {
               <p className="font-mono text-xs uppercase tracking-widest text-primary">
                 04 · Judicial &amp; Professional Commendations
               </p>
-              <h2
-                id="testimonials-heading"
-                className="mt-3 font-display text-display text-foreground"
-              >
-                Some Testimonials
-              </h2>
+              <EditorialTextReveal>
+                <h2
+                  id="testimonials-heading"
+                  className="mt-3 font-display text-display text-foreground"
+                >
+                  Some Testimonials
+                </h2>
+              </EditorialTextReveal>
             </ScrollReveal>
 
             <GoldDivider className="my-10 md:my-14" />

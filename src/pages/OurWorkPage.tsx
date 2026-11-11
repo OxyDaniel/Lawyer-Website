@@ -3,9 +3,12 @@ import { ChevronLeft, ChevronRight, Expand, X } from 'lucide-react';
 import { FIRM_ASSETS, type ResearchStudyAsset } from '../data/firmData';
 import { ArchivalImage } from '../components/ui';
 import {
+  CurtainImageReveal,
+  EditorialTextReveal,
   GoldDivider,
   ParallaxFrame,
   ScrollReveal,
+  SectionSentinel,
 } from '../components/ScrollReveal';
 import { ContactSection } from '../components/ContactSection';
 import { LogoWatermark } from '../components/BrandLogo';
@@ -57,6 +60,7 @@ export function OurWorkPage() {
           aria-labelledby="our-work-heading"
           className="relative overflow-hidden border-b border-primary/30 bg-background px-6 pt-32 pb-20 md:px-12 md:pt-44 md:pb-28"
         >
+          <SectionSentinel name="Portfolio Overview" />
           {/* Subtle Page Header Gold Watermark */}
           <LogoWatermark
             variant="gold"
@@ -76,12 +80,14 @@ export function OurWorkPage() {
                   Austin Mamedu &amp; Co. · Practice &amp; Research Portfolio
                 </p>
               </div>
-              <h1
-                id="our-work-heading"
-                className="mt-4 font-display text-hero font-medium tracking-tight text-foreground"
-              >
-                Our Work
-              </h1>
+              <EditorialTextReveal>
+                <h1
+                  id="our-work-heading"
+                  className="mt-4 font-display text-hero font-medium tracking-tight text-foreground"
+                >
+                  Our Work
+                </h1>
+              </EditorialTextReveal>
             </ScrollReveal>
 
             <GoldDivider className="my-8 max-w-2xl" />
@@ -100,6 +106,7 @@ export function OurWorkPage() {
           aria-labelledby="case-management-heading"
           className="relative overflow-hidden border-b border-primary/25 bg-background px-6 py-24 md:px-12 md:py-36"
         >
+          <SectionSentinel name="01 · Case Management" />
           <LogoWatermark
             variant="gold"
             position="bottom-left"
@@ -114,12 +121,14 @@ export function OurWorkPage() {
                   <p className="font-mono text-xs uppercase tracking-widest text-primary">
                     01 · Legal Infrastructure
                   </p>
-                  <h2
-                    id="case-management-heading"
-                    className="mt-3 font-display text-display text-foreground"
-                  >
-                    Case Management &amp; Research
-                  </h2>
+                  <EditorialTextReveal>
+                    <h2
+                      id="case-management-heading"
+                      className="mt-3 font-display text-display text-foreground"
+                    >
+                      Case Management &amp; Research
+                    </h2>
+                  </EditorialTextReveal>
                 </ScrollReveal>
 
                 <GoldDivider className="my-8" />
@@ -146,17 +155,17 @@ export function OurWorkPage() {
                     {RESEARCH_PORTALS.map((portal) => (
                       <div
                         key={portal.name}
-                        className="flex items-baseline justify-between gap-4 py-3.5"
+                        className="group flex items-baseline justify-between gap-4 py-3.5 transition-colors hover:border-primary/50"
                       >
                         <div className="flex items-baseline gap-4">
                           <span className="font-mono text-xs text-primary tabular-nums">
                             {portal.code}
                           </span>
-                          <span className="font-display text-xl font-medium text-foreground">
+                          <span className="font-display text-xl font-medium text-foreground transition-colors group-hover:text-accent">
                             {portal.name}
                           </span>
                         </div>
-                        <span className="text-xs text-muted text-right">
+                        <span className="text-xs text-muted text-right transition-colors group-hover:text-foreground/90">
                           {portal.scope}
                         </span>
                       </div>
@@ -178,18 +187,20 @@ export function OurWorkPage() {
                       </span>
                     </div>
 
-                    <ParallaxFrame
-                      offset={14}
-                      className="mx-auto max-w-sm bg-background p-6"
-                    >
-                      <ArchivalImage
-                        src={FIRM_ASSETS.idl.IDL_1.src}
-                        alt={FIRM_ASSETS.idl.IDL_1.alt}
-                        fallbackTitle={FIRM_ASSETS.idl.IDL_1.title}
-                        className="aspect-[3/4] w-full"
-                        imgClassName="object-contain"
-                      />
-                    </ParallaxFrame>
+                    <CurtainImageReveal curtainColor="bg-surface">
+                      <ParallaxFrame
+                        offset={14}
+                        className="mx-auto max-w-sm bg-background p-6"
+                      >
+                        <ArchivalImage
+                          src={FIRM_ASSETS.idl.IDL_1.src}
+                          alt={FIRM_ASSETS.idl.IDL_1.alt}
+                          fallbackTitle={FIRM_ASSETS.idl.IDL_1.title}
+                          className="aspect-[3/4] w-full"
+                          imgClassName="object-contain"
+                        />
+                      </ParallaxFrame>
+                    </CurtainImageReveal>
 
                     <figcaption className="mt-6 border-t border-primary/20 pt-4">
                       <p className="font-display text-xl text-foreground">
@@ -211,6 +222,7 @@ export function OurWorkPage() {
           aria-labelledby="idl-heading"
           className="relative overflow-hidden border-b border-primary/30 bg-ivory px-6 py-24 text-ivory-ink md:px-12 md:py-36"
         >
+          <SectionSentinel name="02 · International Mandate" />
           {/* Subtle Dark Gold Watermark for Warm Ivory Surface */}
           <LogoWatermark
             variant="darkGold"
@@ -223,13 +235,15 @@ export function OurWorkPage() {
               <p className="font-mono text-xs uppercase tracking-widest text-ivory-gold">
                 02 · International Mandate
               </p>
-              <h2
-                id="idl-heading"
-                className="mt-3 max-w-4xl font-display text-display text-ivory-ink"
-              >
-                International Development Law and INGOs &amp; UN Agencies
-                Experience
-              </h2>
+              <EditorialTextReveal>
+                <h2
+                  id="idl-heading"
+                  className="mt-3 max-w-4xl font-display text-display text-ivory-ink"
+                >
+                  International Development Law and INGOs &amp; UN Agencies
+                  Experience
+                </h2>
+              </EditorialTextReveal>
             </ScrollReveal>
 
             <div className="my-10 h-px w-full bg-ivory-border" />
@@ -268,15 +282,17 @@ export function OurWorkPage() {
                 {/* Featured Primary Photograph (IDL_2) */}
                 <ScrollReveal delay={0.12}>
                   <figure className="border border-ivory-gold/40 bg-ivory-surface p-6 md:p-8">
-                    <ParallaxFrame offset={12} className="bg-white p-8">
-                      <ArchivalImage
-                        src={FIRM_ASSETS.idl.IDL_2.src}
-                        alt={FIRM_ASSETS.idl.IDL_2.alt}
-                        fallbackTitle={FIRM_ASSETS.idl.IDL_2.title}
-                        className="h-56 w-full sm:h-64"
-                        imgClassName="object-contain"
-                      />
-                    </ParallaxFrame>
+                    <CurtainImageReveal curtainColor="bg-[#E4DFD3]">
+                      <ParallaxFrame offset={12} className="bg-white p-8">
+                        <ArchivalImage
+                          src={FIRM_ASSETS.idl.IDL_2.src}
+                          alt={FIRM_ASSETS.idl.IDL_2.alt}
+                          fallbackTitle={FIRM_ASSETS.idl.IDL_2.title}
+                          className="h-56 w-full sm:h-64"
+                          imgClassName="object-contain"
+                        />
+                      </ParallaxFrame>
+                    </CurtainImageReveal>
                     <figcaption className="mt-5 flex flex-wrap items-center justify-between gap-2 border-t border-ivory-border pt-3.5">
                       <span className="font-display text-xl font-medium text-ivory-ink">
                         {FIRM_ASSETS.idl.IDL_2.title}
@@ -294,15 +310,17 @@ export function OurWorkPage() {
                 {/* IDL_4 (IOM UN Migration) spanning full width of right column */}
                 <ScrollReveal delay={0.14} className="sm:col-span-12">
                   <figure className="border border-ivory-gold/40 bg-ivory-surface p-6">
-                    <ParallaxFrame offset={10} className="bg-white p-6">
-                      <ArchivalImage
-                        src={FIRM_ASSETS.idl.IDL_4.src}
-                        alt={FIRM_ASSETS.idl.IDL_4.alt}
-                        fallbackTitle={FIRM_ASSETS.idl.IDL_4.title}
-                        className="h-44 w-full"
-                        imgClassName="object-contain"
-                      />
-                    </ParallaxFrame>
+                    <CurtainImageReveal curtainColor="bg-[#E4DFD3]">
+                      <ParallaxFrame offset={10} className="bg-white p-6">
+                        <ArchivalImage
+                          src={FIRM_ASSETS.idl.IDL_4.src}
+                          alt={FIRM_ASSETS.idl.IDL_4.alt}
+                          fallbackTitle={FIRM_ASSETS.idl.IDL_4.title}
+                          className="h-44 w-full"
+                          imgClassName="object-contain"
+                        />
+                      </ParallaxFrame>
+                    </CurtainImageReveal>
                     <figcaption className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-ivory-border pt-3">
                       <span className="font-display text-lg font-medium text-ivory-ink">
                         {FIRM_ASSETS.idl.IDL_4.title}
@@ -317,15 +335,17 @@ export function OurWorkPage() {
                 {/* IDL_3 (SOS Children's Villages) - 6 cols */}
                 <ScrollReveal delay={0.2} className="sm:col-span-6">
                   <figure className="flex h-full flex-col justify-between border border-ivory-gold/40 bg-ivory-surface p-5">
-                    <ParallaxFrame offset={12} className="bg-white p-5">
-                      <ArchivalImage
-                        src={FIRM_ASSETS.idl.IDL_3.src}
-                        alt={FIRM_ASSETS.idl.IDL_3.alt}
-                        fallbackTitle={FIRM_ASSETS.idl.IDL_3.title}
-                        className="h-40 w-full"
-                        imgClassName="object-contain"
-                      />
-                    </ParallaxFrame>
+                    <CurtainImageReveal curtainColor="bg-[#E4DFD3]">
+                      <ParallaxFrame offset={12} className="bg-white p-5">
+                        <ArchivalImage
+                          src={FIRM_ASSETS.idl.IDL_3.src}
+                          alt={FIRM_ASSETS.idl.IDL_3.alt}
+                          fallbackTitle={FIRM_ASSETS.idl.IDL_3.title}
+                          className="h-40 w-full"
+                          imgClassName="object-contain"
+                        />
+                      </ParallaxFrame>
+                    </CurtainImageReveal>
                     <figcaption className="mt-4 border-t border-ivory-border pt-3">
                       <span className="block font-display text-lg font-medium text-ivory-ink">
                         {FIRM_ASSETS.idl.IDL_3.title}
@@ -343,15 +363,17 @@ export function OurWorkPage() {
                   className="sm:col-span-6 sm:mt-8"
                 >
                   <figure className="flex h-full flex-col justify-between border border-ivory-gold/40 bg-ivory-surface p-5">
-                    <ParallaxFrame offset={14} className="bg-white p-5">
-                      <ArchivalImage
-                        src={FIRM_ASSETS.idl.IDL_5.src}
-                        alt={FIRM_ASSETS.idl.IDL_5.alt}
-                        fallbackTitle={FIRM_ASSETS.idl.IDL_5.title}
-                        className="h-40 w-full"
-                        imgClassName="object-contain"
-                      />
-                    </ParallaxFrame>
+                    <CurtainImageReveal curtainColor="bg-[#E4DFD3]">
+                      <ParallaxFrame offset={14} className="bg-white p-5">
+                        <ArchivalImage
+                          src={FIRM_ASSETS.idl.IDL_5.src}
+                          alt={FIRM_ASSETS.idl.IDL_5.alt}
+                          fallbackTitle={FIRM_ASSETS.idl.IDL_5.title}
+                          className="h-40 w-full"
+                          imgClassName="object-contain"
+                        />
+                      </ParallaxFrame>
+                    </CurtainImageReveal>
                     <figcaption className="mt-4 border-t border-ivory-border pt-3">
                       <span className="block font-display text-lg font-medium text-ivory-ink">
                         {FIRM_ASSETS.idl.IDL_5.title}
@@ -373,6 +395,7 @@ export function OurWorkPage() {
           aria-labelledby="research-studies-heading"
           className="relative overflow-hidden bg-background px-6 py-24 md:px-12 md:py-36"
         >
+          <SectionSentinel name="03 · Archival Studies" />
           <LogoWatermark
             variant="gold"
             position="bottom-right"
@@ -386,12 +409,14 @@ export function OurWorkPage() {
                   <p className="font-mono text-xs uppercase tracking-widest text-primary">
                     03 · Archival Portfolio
                   </p>
-                  <h2
-                    id="research-studies-heading"
-                    className="mt-3 font-display text-display text-foreground"
-                  >
-                    Some of Our Research Studies
-                  </h2>
+                  <EditorialTextReveal>
+                    <h2
+                      id="research-studies-heading"
+                      className="mt-3 font-display text-display text-foreground"
+                    >
+                      Some of Our Research Studies
+                    </h2>
+                  </EditorialTextReveal>
                 </div>
                 <p className="font-mono text-xs text-muted">
                   Select any study plate to inspect in full-scale view

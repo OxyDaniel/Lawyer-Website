@@ -6,9 +6,12 @@ import {
 } from '../data/firmData';
 import { ArchivalImage } from '../components/ui';
 import {
+  CurtainImageReveal,
+  EditorialTextReveal,
   GoldDivider,
   ParallaxFrame,
   ScrollReveal,
+  SectionSentinel,
 } from '../components/ScrollReveal';
 import { Timeline } from '../components/Timeline';
 import { ContactSection } from '../components/ContactSection';
@@ -34,6 +37,7 @@ export function YourLawyersPage() {
           aria-labelledby="your-lawyers-heading"
           className="relative overflow-hidden border-b border-primary/30 bg-background px-6 pt-32 pb-20 md:px-12 md:pt-44 md:pb-28"
         >
+          <SectionSentinel name="Counsel Leadership" />
           {/* Subtle Page Header Gold Watermark */}
           <LogoWatermark
             variant="gold"
@@ -53,12 +57,14 @@ export function YourLawyersPage() {
                   Austin Mamedu &amp; Co. · Counsel &amp; Practice Leadership
                 </p>
               </div>
-              <h1
-                id="your-lawyers-heading"
-                className="mt-4 font-display text-hero font-medium tracking-tight text-foreground"
-              >
-                Your Lawyers
-              </h1>
+              <EditorialTextReveal>
+                <h1
+                  id="your-lawyers-heading"
+                  className="mt-4 font-display text-hero font-medium tracking-tight text-foreground"
+                >
+                  Your Lawyers
+                </h1>
+              </EditorialTextReveal>
             </ScrollReveal>
 
             <GoldDivider className="my-8 max-w-2xl" />
@@ -77,6 +83,7 @@ export function YourLawyersPage() {
           aria-labelledby="augustine-mamedu-heading"
           className="relative overflow-hidden border-b border-primary/30 bg-background px-6 py-24 md:px-12 md:py-36"
         >
+          <SectionSentinel name="01 · Augustine Mamedu" />
           {/* Watermark representing Augustine Mamedu (AM) monogram */}
           <LogoWatermark
             variant="gold"
@@ -86,8 +93,8 @@ export function YourLawyersPage() {
           />
           <div className="relative z-10 mx-auto max-w-[90rem]">
             <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
-              {/* Left Column: Primary Portrait (lawyer_1) */}
-              <div className="min-w-0 lg:col-span-5">
+              {/* Left Column: Primary Portrait (lawyer_1) - Sticky on desktop for editorial scrollytelling */}
+              <div className="min-w-0 lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
                 <ScrollReveal>
                   <figure className="border border-primary/35 bg-surface p-6 md:p-8">
                     <div className="mb-4 flex items-center justify-between border-b border-primary/20 pb-3">
@@ -106,18 +113,20 @@ export function YourLawyersPage() {
                       </span>
                     </div>
 
-                    <ParallaxFrame
-                      offset={12}
-                      className="bg-background p-4 sm:p-6"
-                    >
-                      <ArchivalImage
-                        src={FIRM_ASSETS.lawyers.lawyer_1.src}
-                        alt={FIRM_ASSETS.lawyers.lawyer_1.alt}
-                        fallbackTitle={FIRM_ASSETS.lawyers.lawyer_1.title}
-                        className="aspect-[4/5] w-full"
-                        imgClassName="object-cover object-top"
-                      />
-                    </ParallaxFrame>
+                    <CurtainImageReveal curtainColor="bg-surface">
+                      <ParallaxFrame
+                        offset={12}
+                        className="bg-background p-4 sm:p-6"
+                      >
+                        <ArchivalImage
+                          src={FIRM_ASSETS.lawyers.lawyer_1.src}
+                          alt={FIRM_ASSETS.lawyers.lawyer_1.alt}
+                          fallbackTitle={FIRM_ASSETS.lawyers.lawyer_1.title}
+                          className="aspect-[4/5] w-full"
+                          imgClassName="object-cover object-top"
+                        />
+                      </ParallaxFrame>
+                    </CurtainImageReveal>
 
                     <figcaption className="mt-5 border-t border-primary/20 pt-4">
                       <p className="font-display text-2xl font-medium text-foreground">
@@ -137,12 +146,14 @@ export function YourLawyersPage() {
                   <p className="font-mono text-xs uppercase tracking-widest text-primary">
                     01 · Principal Profile
                   </p>
-                  <h2
-                    id="augustine-mamedu-heading"
-                    className="mt-3 font-display text-display text-foreground"
-                  >
-                    Augustine Mamedu
-                  </h2>
+                  <EditorialTextReveal>
+                    <h2
+                      id="augustine-mamedu-heading"
+                      className="mt-3 font-display text-display text-foreground"
+                    >
+                      Augustine Mamedu
+                    </h2>
+                  </EditorialTextReveal>
                 </ScrollReveal>
 
                 <GoldDivider className="my-8" />
@@ -178,17 +189,19 @@ export function YourLawyersPage() {
                     {supportingBadges.map((badge) => (
                       <figure
                         key={badge.src}
-                        className="flex flex-col justify-between border border-primary/30 bg-surface p-5"
+                        className="flex flex-col justify-between border border-primary/30 bg-surface p-5 transition-colors hover:border-primary/60"
                       >
-                        <div className="bg-white p-4">
-                          <ArchivalImage
-                            src={badge.src}
-                            alt={badge.alt}
-                            fallbackTitle={badge.title}
-                            className="h-32 w-full"
-                            imgClassName="object-contain"
-                          />
-                        </div>
+                        <CurtainImageReveal curtainColor="bg-surface">
+                          <div className="bg-white p-4">
+                            <ArchivalImage
+                              src={badge.src}
+                              alt={badge.alt}
+                              fallbackTitle={badge.title}
+                              className="h-32 w-full"
+                              imgClassName="object-contain"
+                            />
+                          </div>
+                        </CurtainImageReveal>
                         <figcaption className="mt-4 border-t border-primary/20 pt-3">
                           <span className="block font-display text-lg font-medium text-foreground">
                             {badge.title}
@@ -219,6 +232,7 @@ export function YourLawyersPage() {
           aria-labelledby="partners-associates-heading"
           className="relative overflow-hidden bg-surface px-6 py-24 md:px-12 md:py-36"
         >
+          <SectionSentinel name="02 · Partners & Associates" />
           <LogoWatermark
             variant="gold"
             position="center"
@@ -232,12 +246,14 @@ export function YourLawyersPage() {
                   <p className="font-mono text-xs uppercase tracking-widest text-primary">
                     02 · Chambers Team
                   </p>
-                  <h2
-                    id="partners-associates-heading"
-                    className="mt-3 font-display text-display text-foreground"
-                  >
-                    Partners &amp; Associates
-                  </h2>
+                  <EditorialTextReveal>
+                    <h2
+                      id="partners-associates-heading"
+                      className="mt-3 font-display text-display text-foreground"
+                    >
+                      Partners &amp; Associates
+                    </h2>
+                  </EditorialTextReveal>
                   <GoldDivider className="mt-6 max-w-xs" />
                 </ScrollReveal>
               </div>
