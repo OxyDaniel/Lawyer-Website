@@ -9,7 +9,6 @@ import {
   CurtainImageReveal,
   EditorialTextReveal,
   GoldDivider,
-  ParallaxFrame,
   ScrollReveal,
   SectionSentinel,
 } from '../components/ScrollReveal';
@@ -114,18 +113,16 @@ export function YourLawyersPage() {
                     </div>
 
                     <CurtainImageReveal curtainColor="bg-surface">
-                      <ParallaxFrame
-                        offset={12}
-                        className="bg-background p-4 sm:p-6"
-                      >
+                      <div className="bg-background p-2 sm:p-3 border border-primary/20">
                         <ArchivalImage
                           src={FIRM_ASSETS.lawyers.lawyer_1.src}
                           alt={FIRM_ASSETS.lawyers.lawyer_1.alt}
                           fallbackTitle={FIRM_ASSETS.lawyers.lawyer_1.title}
-                          className="aspect-[4/5] w-full"
-                          imgClassName="object-cover object-top"
+                          loading="eager"
+                          className="aspect-[3/4] w-full"
+                          imgClassName="object-cover object-center"
                         />
-                      </ParallaxFrame>
+                      </div>
                     </CurtainImageReveal>
 
                     <figcaption className="mt-5 border-t border-primary/20 pt-4">
@@ -263,10 +260,6 @@ export function YourLawyersPage() {
                   <p className="font-display text-2xl leading-relaxed text-foreground sm:text-3xl">
                     Augustine Mamedu is assisted by{' '}
                     <span className="text-accent">
-                      Habiba Saddiq, LL.B, BL, LL.M
-                    </span>
-                    ;{' '}
-                    <span className="text-accent">
                       Favourite Okoronma, LL.B, BL
                     </span>
                     . We train for and emphasise finesse in drafting, organised
@@ -274,7 +267,13 @@ export function YourLawyersPage() {
                   </p>
                 </ScrollReveal>
 
-                <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <div
+                  className={`mt-12 grid gap-6 ${
+                    ASSOCIATES.length === 1
+                      ? 'grid-cols-1 max-w-xl'
+                      : 'grid-cols-1 sm:grid-cols-2'
+                  }`}
+                >
                   {ASSOCIATES.map((associate, index) => (
                     <ScrollReveal key={associate.id} delay={index * 0.12}>
                       <article className="flex h-full flex-col justify-between border border-primary/30 bg-background p-7 md:p-8">

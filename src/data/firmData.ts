@@ -1,3 +1,5 @@
+import augustinePortrait from '../assets/images/augustine_mamedu_studio_1794746246769.jpg';
+
 export interface TimelineMilestone {
   year: string;
   title: string;
@@ -79,8 +81,8 @@ export const FIRM_ASSETS = {
   },
   lawyers: {
     lawyer_1: {
-      src: '/assets/aistudio/lawyer_1_7687090d.JPG',
-      alt: 'Portrait of Augustine Mamedu, Principal Solicitor at Austin Mamedu & Co.',
+      src: augustinePortrait,
+      alt: 'Clean studio portrait of Augustine Mamedu, Principal Solicitor at Austin Mamedu & Co.',
       title: 'Augustine Mamedu',
       caption: 'Principal Solicitor · Nigeria, England & Wales, Republic of Ireland',
     },
@@ -217,12 +219,6 @@ export const TESTIMONIALS = [
 ];
 
 export const ASSOCIATES = [
-  {
-    id: 'habiba-saddiq',
-    monogram: 'HS',
-    name: 'Habiba Saddiq',
-    qualifications: 'LL.B, BL, LL.M',
-  },
   {
     id: 'favourite-okoronma',
     monogram: 'FO',
